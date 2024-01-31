@@ -1,8 +1,19 @@
 import React from 'react'
 
-function QuoteBox() {
+function QuoteBox({quote,author}) {
   return (
-    <div>QuoteBox</div>
+    <div className='quotebox'>
+        <button>New Quote</button>
+
+<p className='quote'>
+
+        {quote}
+</p>
+
+<p className='author'>
+  {author}
+</p>
+    </div>
   )
 }
 

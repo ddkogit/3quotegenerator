@@ -10,7 +10,8 @@ function App() {
     <>
     <h2>Project 3 : Quote Generator</h2>
     
-    <QuoteBox />
+    <QuoteBox  quote={"ahjksdhakdhsklas"}
+    author={"ioqwiopiwqp"}/>
     </>
   )
 }
