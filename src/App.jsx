@@ -1,17 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+
 import './App.css'
 import QuoteBox from "./components/QuoteBox"
+import {useFetch} from './hooks/useFetch'
+
+
+
 
 function App() {
+  
+
+  const [data,setData]= useState();
+  const [rand,setRand]=useState(Math.floor(Math.random()*15));
+
+  const genRand =()=>{
+
+
+    const rand = Math.floor(Math.random()*15);
+    
+    setRand(rand);
+  }
+  
+
+  
+
+
+  useEffect(()=>{
+
+   const fetchdata =async ()=>{
+    const result = await useFetch();
+    
+
+    setData(result[rand]);
+
+   }
+
+   fetchdata();
+   
+  },[rand])
 
   return (
     <>
     <h2>Project 3 : Quote Generator</h2>
-    
-    <QuoteBox  quote={"ahjksdhakdhsklas"}
-    author={"ioqwiopiwqp"}/>
+    { data &&
+
+      <QuoteBox  text={data.text}
+      author={data.author} genRand={genRand}/>
+    }
     </>
   )
 }

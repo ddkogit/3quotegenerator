@@ -1,17 +1,17 @@
 import React from 'react'
 
-function QuoteBox({quote,author}) {
+function QuoteBox({text,author,genRand}) {
   return (
     <div className='quotebox'>
-        <button>New Quote</button>
+        <button onClick={genRand}>New Quote</button>
 
 <p className='quote'>
 
-        {quote}
+        "{text} "
 </p>
 
 <p className='author'>
-  {author}
+ - {author}
 </p>
     </div>
   )

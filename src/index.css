@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(218, 84, 84);
+    text-align: center;
+}
+
+.quotebox{
+    background-color: white;
+    width: 80%;
+    align-items: center;
+    margin: 100px auto;
+    padding: 50px 30px;
+    text-align: center;
+}
