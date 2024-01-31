@@ -7,7 +7,7 @@ function QuoteBox({text,author,genRand}) {
 
 <p className='quote'>
 
-        "{text} "
+        "{text}"
 </p>
 
 <p className='author'>
